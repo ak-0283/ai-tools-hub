@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Hub | About</title>
+  <meta name="description" content="Learn what confusion matrix and classification report mean in simple terms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader-wrapper" id="loader" aria-label="Loading">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">AI Tools Hub</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section container reveal">
+      <h1>About AI Evaluation Metrics</h1>
+      <p>Simple explanations designed for beginners.</p>
+    </section>
+
+    <section class="about-sections section container">
+      <!-- Confusion Matrix Explanation -->
+      <article class="info-card reveal">
+        <div class="info-icon" aria-hidden="true">📊</div>
+        <div>
+          <h2>What is a Confusion Matrix?</h2>
+          <p>
+            A confusion matrix is a table used to check how well a classification model is performing.
+            It compares what the model predicted with the actual correct answers.
+          </p>
+          <p>
+            In simple words, it helps you see where your model is right and where it makes mistakes.
+          </p>
+        </div>
+      </article>
+
+      <!-- Classification Report Explanation -->
+      <article class="info-card reveal">
+        <div class="info-icon" aria-hidden="true">🧾</div>
+        <div>
+          <h2>What is a Classification Report?</h2>
+          <p>
+            A classification report gives detailed performance numbers like precision, recall,
+            f1-score, and support for each class.
+          </p>
+          <p>
+            It helps you understand not just if your model works, but how well it performs for each category.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 AI Tools Hub | Built by Abhay Kumar</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

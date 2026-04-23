@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Hub | Home</title>
+  <meta name="description" content="AI Tools Hub helps you generate Confusion Matrix and Metrics Tables instantly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader-wrapper" id="loader" aria-label="Loading">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">AI Tools Hub</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section container reveal">
+      <div class="hero-content">
+        <h1>AI Evaluation Tools Made Simple</h1>
+        <p>Generate Confusion Matrix and Metrics Tables instantly</p>
+      </div>
+    </section>
+
+    <!-- Tools Cards Section -->
+    <section class="tools section container reveal">
+      <div class="section-title">
+        <h2>Explore Tools</h2>
+        <p>Choose the tool you want to open.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="tool-card">
+          <div class="card-icon">📊</div>
+          <h3>Confusion Matrix Generator</h3>
+          <p>Visualize model performance using true positives, false positives, true negatives, and false negatives.</p>
+          <a class="btn btn-primary" href="https://confusion-matrix-generator.vercel.app/" target="_blank" rel="noopener noreferrer">Open Tool</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="card-icon">📈</div>
+          <h3>Metrics Table Generator</h3>
+          <p>Generate a clean ML metrics table to compare model performance quickly and clearly.</p>
+          <a class="btn btn-primary" href="https://ml-metrics-table-generator.vercel.app/" target="_blank" rel="noopener noreferrer">Open Tool</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 AI Tools Hub | Built by Abhay Kumar</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

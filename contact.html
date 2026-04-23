@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Hub | Contact</title>
+  <meta name="description" content="Get in touch with AI Tools Hub through a simple contact form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loader-wrapper" id="loader" aria-label="Loading">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">AI Tools Hub</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section container reveal">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear your feedback and ideas.</p>
+    </section>
+
+    <section class="section container reveal">
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" />
+          <small class="error-text" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" />
+          <small class="error-text" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+          <small class="error-text" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formSuccess" class="success-text" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 AI Tools Hub | Built by Abhay Kumar</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
