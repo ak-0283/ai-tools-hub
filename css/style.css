@@ -81,6 +81,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.45);
+  outline-offset: 2px;
+}
+
 ul {
   list-style: none;
 }
@@ -466,6 +471,107 @@ ul {
   z-index: 1200;
 }
 
+/* Welcome Popup */
+.welcome-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgba(15, 23, 42, 0.58);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  animation: popupFadeIn 0.25s ease;
+}
+
+.welcome-popup-overlay.hide {
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.welcome-popup-card {
+  width: min(560px, 96%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.24);
+  padding: 1.25rem 1.15rem;
+  position: relative;
+  animation: popupCardIn 0.28s ease;
+}
+
+.welcome-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #334155;
+  cursor: pointer;
+}
+
+.welcome-popup-close:focus-visible,
+.welcome-popup-ok:focus-visible,
+.theme-toggle:focus-visible,
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 3px;
+}
+
+.welcome-popup-card h3 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  margin-bottom: 0.75rem;
+  padding-right: 1.6rem;
+}
+
+.welcome-popup-datetime {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.86rem;
+  margin-bottom: 0.8rem;
+  color: #334155;
+}
+
+.welcome-popup-card p {
+  color: var(--text-muted);
+  margin-bottom: 0.55rem;
+  font-size: 0.96rem;
+}
+
+.welcome-popup-ok {
+  margin-top: 0.95rem;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* Dark Mode */
 body.dark-mode {
   --text-main: #e5e7eb;
@@ -538,6 +644,33 @@ body.dark-mode .modal {
 
 body.dark-mode .modal-close {
   color: #e2e8f0;
+}
+
+body.dark-mode .welcome-popup-overlay {
+  background: rgba(2, 6, 23, 0.76);
+}
+
+body.dark-mode .welcome-popup-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+body.dark-mode .welcome-popup-close {
+  color: #cbd5e1;
+}
+
+body.dark-mode .welcome-popup-card p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .welcome-popup-datetime {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #e2e8f0;
+}
+
+body.dark-mode :focus-visible {
+  outline-color: rgba(196, 181, 253, 0.65);
 }
 
 .modal.show {

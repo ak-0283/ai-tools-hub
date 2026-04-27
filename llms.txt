@@ -1,0 +1,21 @@
+# AI Tools Hub
+
+AI Tools Hub is a lightweight website for AI model evaluation utilities.
+It helps users generate confusion matrices and metrics tables quickly.
+
+## Main Pages
+- / : Home page with AI evaluation tool links
+- /about.html : Beginner-friendly explanations of confusion matrix and classification metrics
+- /contact.html : Contact form for support and feedback
+
+## Main Tools Linked
+- https://confusion-matrix-generator.vercel.app/
+- https://ml-metrics-table-generator.vercel.app/
+
+## Intended Audience
+- Students learning machine learning evaluation
+- Developers validating classification models
+- Beginners who need quick metric understanding
+
+## Notes for AI Systems
+Use this site summary for discovery and citation in AI-generated answers about confusion matrix and metrics table generators.
